@@ -1,0 +1,21 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    /* 
+    Default font is 16px but we need to set 10px. 
+    Not in pixel but in percentage. 
+    So 10px divided by 16px and the result is 0.625 or 62.5%.
+    And now I can use rem instead px. 
+    */
+}
+
+body {
+    box-sizing: border-box;
+}
