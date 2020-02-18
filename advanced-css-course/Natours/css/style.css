@@ -51,13 +51,16 @@ ORDER: Base + typography > general layout + grid > page layout > components
   box-sizing: inherit; }
 
 html {
-  font-size: 62.5%;
-  /* 
-    Default font is 16px but we need to set 10px. 
-    Not in pixel but in percentage. 
-    So 10px divided by 16px and the result is 0.625 or 62.5%.
-    And now I can use rem instead px. 
-    */ }
+  font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box; }
