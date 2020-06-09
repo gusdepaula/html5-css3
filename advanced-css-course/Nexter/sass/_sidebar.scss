@@ -12,6 +12,10 @@
         justify-content: flex-end;
         align-items: center;
     }
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-column: 1 / -1;
+    }
 }
 
 .nav-btn {
