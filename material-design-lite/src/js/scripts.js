@@ -1,5 +1,5 @@
 const header = document.querySelector('.mdl-layout__header');
-const markup = `<div class="mdl-layout-icon"></div>
+const markup = `
 <div class="mdl-layout__header-row">
   <!-- Title -->
   <a href="/" class="mdl-navigation__link mdl-layout-title">Learning MDL</a>
@@ -9,9 +9,10 @@ const markup = `<div class="mdl-layout-icon"></div>
   <nav class="mdl-navigation">
     <a class="mdl-navigation__link" href="badges.html">Badges</a>
     <a class="mdl-navigation__link" href="buttons.html">Buttons</a>
-    <a class="mdl-navigation__link" href="">Link</a>
+    <a class="mdl-navigation__link" href="cards.html">Cards</a>
     <a class="mdl-navigation__link" href="">Link</a>
   </nav>
-</div>`;
+</div>
+`;
 
 header.insertAdjacentHTML('beforeend', markup);
