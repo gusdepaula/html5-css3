@@ -1,5 +1,8 @@
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Badge Code</title>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -13,43 +16,37 @@
       src="/node_modules/material-design-lite/material.min.js"
     ></script>
   </head>
-
   <body>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class="mdl-layout__header">
         <div class="mdl-layout-icon"></div>
         <div class="mdl-layout__header-row">
           <!-- Title -->
-          <span class="mdl-layout-title">Title</span>
+          <span class="mdl-layout-title">Learning MDL</span>
           <!-- Add spacer, to align navigation to the right -->
           <div class="mdl-layout-spacer"></div>
           <!-- Navigation -->
           <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" href="">Link</a>
+            <a class="mdl-navigation__link" href="/badges.html">Badges</a>
             <a class="mdl-navigation__link" href="">Link</a>
             <a class="mdl-navigation__link" href="">Link</a>
             <a class="mdl-navigation__link" href="">Link</a>
           </nav>
         </div>
       </header>
-      <div class="mdl-layout__drawer">
-        <span class="mdl-layout-title">Title</span>
-        <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="">Link</a>
-          <a class="mdl-navigation__link" href="">Link</a>
-          <a class="mdl-navigation__link" href="">Link</a>
-          <a class="mdl-navigation__link" href="">Link</a>
-        </nav>
-      </div>
       <main class="mdl-layout__content">
-        <div style="max-width: 600px" class="mdl-grid">
-          <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
-            <div class="mdl-tabs__tab-bar">
-              <a href="#starks-panel" class="mdl-tabs__tab is-active">Colors</a>
-              <a href="#lannisters-panel" class="mdl-tabs__tab">Names</a>
-              <a href="#targaryens-panel" class="mdl-tabs__tab">Gender</a>
-            </div>
+        <div class="mdl-grid">
+          <div class="material-icons mdl-badge" data-badge="12">
+            account_box
           </div>
+          <a href="#">This is a link width a badge</a>
+          <span class="mdl-badge" data-badge="4"></span>
+
+          <a href="#">This is a link width a badge</a>
+          <span
+            class="mdl-badge mdl-badge--no-background"
+            data-badge="4"
+          ></span>
         </div>
       </main>
     </div>
