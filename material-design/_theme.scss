@@ -3,6 +3,7 @@
 $mdc-theme-primary: $crane-primary-color;
 
 @import "@material/button/mdc-button";
+@import "@material/select/mdc-select";
 
 .crane-label {
   order: -1;
