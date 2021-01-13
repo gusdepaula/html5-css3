@@ -3,6 +3,7 @@
 @import "@material/list/mdc-list";
 @import "@material/image-list/mdc-image-list";
 @import "@material/ripple/mdc-ripple";
+@import "@material/typography/mdc-typography";
 
 .home {
   display: flex; // Flexbox is used to easily arrange the persistent drawer and content side-by-side
@@ -25,6 +26,18 @@
   @include mdc-image-list-standard-columns(4);
 
   overflow: auto;
+
+  .mdc-image-list__supporting {
+    justify-content: center;
+  }
+
+  .mdc-image-list__item {
+    padding: 10px;
+  }
+
+  .mdc-image-list__label {
+    @include mdc-typography(subtitle2);
+  }
 }
 
 .shrine-drawer {
@@ -47,4 +60,22 @@
   .mdc-list .mdc-list-item {
     @include mdc-states-activated(#fff);
   }
+}
+
+.shrine-title {
+  @include mdc-typography(headline6);
+}
+
+.shrine-select-item-divider {
+  display: block;
+  border-bottom-color: #eaa4a4;
+  border-bottom-width: 2px;
+  width: 50px;
+  position: relative;
+  top: -8px;
+}
+
+// This needs 2-class specificity to override MDC Drawer styles
+.shrine-drawer .shrine-select-item-divider {
+  margin: 0 auto;
 }

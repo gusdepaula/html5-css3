@@ -25,6 +25,7 @@
     "@material/image-list": "^6.0.0",
     "@material/list": "^6.0.0",
     "@material/ripple": "^6.0.0",
-    "@material/textfield": "^6.0.0"
+    "@material/textfield": "^6.0.0",
+    "@material/typography": "^6.0.0"
   }
 }
