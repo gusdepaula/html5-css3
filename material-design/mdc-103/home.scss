@@ -2,8 +2,15 @@
 @import "@material/drawer/mdc-drawer";
 @import "@material/list/mdc-list";
 @import "@material/image-list/mdc-image-list";
+/**
+  There's an bug when I use
+  @import "@material/ripple/mixins";
+  To fix this bug:
+  https://github.com/material-components/material-components-web-codelabs/issues/139#issuecomment-663077779
+*/
 @import "@material/ripple/mdc-ripple";
 @import "@material/typography/mdc-typography";
+@import "@material/elevation/mdc-elevation";
 
 .home {
   display: flex; // Flexbox is used to easily arrange the persistent drawer and content side-by-side
@@ -78,4 +85,12 @@
 // This needs 2-class specificity to override MDC Drawer styles
 .shrine-drawer .shrine-select-item-divider {
   margin: 0 auto;
+}
+
+.shrine-body {
+  @include mdc-elevation(4);
+
+  display: block;
+  overflow: auto;
+  z-index: 0; // Elevate over the drawer
 }
