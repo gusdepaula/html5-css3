@@ -22,36 +22,49 @@
       <form method="post" action="." id="crane-shipping-form">
         <div class="crane-row">
           <div class="crane-field">
-            <input
-              class="crane-input"
-              aria-labelledby="crane-name-label"
-              type="text"
-              required
-              autofocus
-            />
-            <span class="crane-label" id="crane-name-label"> Name </span>
+            <label class="mdc-text-field mdc-text-field--filled">
+              <span class="mdc-text-field__ripple"></span>
+              <span class="mdc-floating-label" id="crane-name-input">Name</span>
+              <input
+                class="mdc-text-field__input"
+                type="text"
+                aria-labelledby="crane-name-input"
+                required
+              />
+              <span class="mdc-line-ripple"></span>
+            </label>
           </div>
         </div>
         <div class="crane-row">
           <div class="crane-field">
-            <input
-              class="crane-input"
-              aria-labelledby="crane-address-label"
-              type="text"
-              required
-            />
-            <span class="crane-label" id="crane-address-label"> Address </span>
+            <label class="mdc-text-field mdc-text-field--filled">
+              <span class="mdc-text-field__ripple"></span>
+              <span class="mdc-floating-label" id="crane-address-input"
+                >Address</span
+              >
+              <input
+                class="mdc-text-field__input"
+                type="text"
+                aria-labelledby="crane-address-input"
+                required
+              />
+              <span class="mdc-line-ripple"></span>
+            </label>
           </div>
         </div>
         <div class="crane-row">
           <div class="crane-field">
-            <input
-              class="crane-input"
-              aria-labelledby="crane-city-label"
-              type="text"
-              required
-            />
-            <span class="crane-label" id="crane-city-label"> City </span>
+            <label class="mdc-text-field mdc-text-field--filled">
+              <span class="mdc-text-field__ripple"></span>
+              <span class="mdc-floating-label" id="crane-city-input">City</span>
+              <input
+                class="mdc-text-field__input"
+                type="text"
+                aria-labelledby="crane-city-input"
+                required
+              />
+              <span class="mdc-line-ripple"></span>
+            </label>
           </div>
         </div>
         <div class="crane-row">
@@ -235,25 +248,24 @@
                 </ul>
               </div>
             </div>
-            <span class="crane-label">&nbsp;</span>
           </div>
           <div class="crane-field">
-            <!--
-            Note: `pattern="[0-9]*"` tells Safari on iPhone to display a large numeric keypad without decimal points.
-            See https://www.filamentgroup.com/lab/type-number.html
-          -->
-            <input
-              class="crane-input"
-              aria-labelledby="crane-zip-code-label"
-              type="text"
-              required
-              minlength="5"
-              maxlength="5"
-              pattern="[0-9]*"
-            />
-            <span class="crane-label" id="crane-zip-code-label">
-              ZIP Code
-            </span>
+            <label class="mdc-text-field mdc-text-field--filled">
+              <span class="mdc-text-field__ripple"></span>
+              <span class="mdc-floating-label" id="crane-zip-code-input"
+                >ZIP Code</span
+              >
+              <input
+                class="mdc-text-field__input"
+                type="text"
+                aria-labelledby="crane-zip-code-input"
+                required
+                minlength="5"
+                maxlength="5"
+                pattern="[0-9]*"
+              />
+              <span class="mdc-line-ripple"></span>
+            </label>
           </div>
         </div>
         <div class="crane-row crane-row--submit">

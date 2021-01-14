@@ -3,6 +3,12 @@
 @import "@material/menu-surface/mdc-menu-surface";
 @import "@material/button/mdc-button";
 @import "@material/select/mdc-select";
+@import "@material/floating-label/mdc-floating-label";
+@import "@material/line-ripple/mdc-line-ripple";
+@import "@material/notched-outline/mdc-notched-outline";
+@import "@material/textfield/mdc-text-field";
+
+@include textfield.core-styles;
 
 .crane-button {
   $mdc-theme-primary: $crane-primary-color;
