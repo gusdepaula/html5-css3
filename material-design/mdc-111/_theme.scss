@@ -1,5 +1,8 @@
 @import "./variables";
+@import "@material/list/mdc-list";
+@import "@material/menu-surface/mdc-menu-surface";
 @import "@material/button/mdc-button";
+@import "@material/select/mdc-select";
 
 .crane-button {
   $mdc-theme-primary: $crane-primary-color;
