@@ -1,10 +1,8 @@
 @import "./variables";
+@import "@material/button/mdc-button";
 
 .crane-button {
-  background-color: $crane-primary-color;
-  color: #fff;
-  border: 0;
-  padding: 12px;
+  $mdc-theme-primary: $crane-primary-color;
 }
 
 .crane-label {
