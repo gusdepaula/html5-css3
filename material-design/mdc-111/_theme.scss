@@ -8,7 +8,7 @@
 @import "@material/notched-outline/mdc-notched-outline";
 @import "@material/textfield/mdc-text-field";
 
-@include textfield.core-styles;
+// @include textfield.core-styles;
 
 .crane-button {
   $mdc-theme-primary: $crane-primary-color;
