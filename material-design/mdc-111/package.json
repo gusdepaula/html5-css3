@@ -24,6 +24,8 @@
   "dependencies": {
     "@material/button": "^6.0.0",
     "@material/checkbox": "^6.0.0",
+    "@material/form-field": "^6.0.0",
+    "@material/radio": "^6.0.0",
     "@material/ripple": "^6.0.0",
     "@material/select": "^6.0.0",
     "@material/textfield": "^6.0.0"

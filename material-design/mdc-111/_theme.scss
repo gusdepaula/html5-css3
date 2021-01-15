@@ -7,7 +7,9 @@
 @import "@material/line-ripple/mdc-line-ripple";
 @import "@material/notched-outline/mdc-notched-outline";
 @import "@material/textfield/mdc-text-field";
+@import "@material/form-field/mdc-form-field";
 @import "@material/checkbox/mdc-checkbox";
+@import "@material/radio/mdc-radio";
 
 .crane-button {
   $mdc-theme-primary: $crane-primary-color;
