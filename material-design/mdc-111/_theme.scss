@@ -12,6 +12,10 @@
 @import "@material/radio/mdc-radio";
 @import "@material/data-table/mdc-data-table";
 @import "@material/dialog/mdc-dialog";
+@import "@material/tab-bar/mdc-tab-bar";
+@import "@material/tab-scroller/mdc-tab-scroller";
+@import "@material/tab-indicator/mdc-tab-indicator";
+@import "@material/tab/mdc-tab";
 
 .crane-button {
   $mdc-theme-primary: $crane-primary-color;
@@ -35,4 +39,12 @@
 
 .label__checkbox {
   line-height: 38px;
+}
+
+.content {
+  display: none;
+}
+
+.content--active {
+  display: block;
 }

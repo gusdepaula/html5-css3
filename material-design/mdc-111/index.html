@@ -14,387 +14,470 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
   </head>
   <body>
     <header class="crane-header">Shipping Address</header>
 
     <main class="crane-main">
-      <form method="post" action="." id="crane-shipping-form">
-        <div class="crane-row">
-          <div class="crane-field">
-            <label class="mdc-text-field mdc-text-field--filled">
-              <span class="mdc-text-field__ripple"></span>
-              <span class="mdc-floating-label" id="crane-name-input">Name</span>
-              <input
-                class="mdc-text-field__input"
-                type="text"
-                aria-labelledby="crane-name-input"
-                required
-              />
-              <span class="mdc-line-ripple"></span>
-            </label>
-          </div>
-        </div>
-        <div class="crane-row">
-          <div class="crane-field">
-            <div class="mdc-form-field">
-              <div class="mdc-radio">
-                <input
-                  class="mdc-radio__native-control"
-                  type="radio"
-                  id="male"
-                  name="radios"
-                  checked
-                />
-                <div class="mdc-radio__background">
-                  <div class="mdc-radio__outer-circle"></div>
-                  <div class="mdc-radio__inner-circle"></div>
-                </div>
-                <div class="mdc-radio__ripple"></div>
-              </div>
-              <label for="male">Male</label>
-              <div class="mdc-radio">
-                <input
-                  class="mdc-radio__native-control"
-                  type="radio"
-                  id="female"
-                  name="radios"
-                  checked
-                />
-                <div class="mdc-radio__background">
-                  <div class="mdc-radio__outer-circle"></div>
-                  <div class="mdc-radio__inner-circle"></div>
-                </div>
-                <div class="mdc-radio__ripple"></div>
-              </div>
-              <label for="female">Female</label>
+      <div class="mdc-tab-bar" role="tablist">
+        <div class="mdc-tab-scroller">
+          <div class="mdc-tab-scroller__scroll-area">
+            <div class="mdc-tab-scroller__scroll-content">
+              <button
+                class="mdc-tab mdc-tab--stacked mdc-tab--active"
+                role="tab"
+                aria-selected="true"
+                tabindex="0"
+              >
+                <span class="mdc-tab__content">
+                  <span class="mdc-tab__icon material-icons" aria-hidden="true"
+                    >table_rows</span
+                  >
+                  <span class="mdc-tab__text-label">Form</span>
+                </span>
+                <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                  <span
+                    class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"
+                  ></span>
+                </span>
+                <span class="mdc-tab__ripple"></span>
+              </button>
+              <button
+                class="mdc-tab mdc-tab--stacked"
+                role="tab"
+                aria-selected="true"
+                tabindex="0"
+              >
+                <span class="mdc-tab__content">
+                  <span class="mdc-tab__icon material-icons" aria-hidden="true"
+                    >table_chart</span
+                  >
+                  <span class="mdc-tab__text-label">Data Table</span>
+                </span>
+                <span class="mdc-tab-indicator mdc-tab-indicator">
+                  <span
+                    class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"
+                  ></span>
+                </span>
+                <span class="mdc-tab__ripple mdc-ripple-upgraded"></span>
+              </button>
+              <button
+                class="mdc-tab mdc-tab--stacked"
+                role="tab"
+                aria-selected="true"
+                tabindex="0"
+              >
+                <span class="mdc-tab__content">
+                  <span class="mdc-tab__icon material-icons" aria-hidden="true"
+                    >accessibility</span
+                  >
+                  <span class="mdc-tab__text-label">Three</span>
+                </span>
+                <span class="mdc-tab-indicator mdc-tab-indicator">
+                  <span
+                    class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"
+                  ></span>
+                </span>
+                <span class="mdc-tab__ripple"></span>
+              </button>
             </div>
           </div>
         </div>
-        <div class="crane-row">
-          <div class="crane-field">
-            <label class="mdc-text-field mdc-text-field--filled">
-              <span class="mdc-text-field__ripple"></span>
-              <span class="mdc-floating-label" id="crane-address-input"
-                >Address</span
-              >
-              <input
-                class="mdc-text-field__input"
-                type="text"
-                aria-labelledby="crane-address-input"
-                required
-              />
-              <span class="mdc-line-ripple"></span>
-            </label>
-          </div>
-        </div>
-        <div class="crane-row">
-          <div class="crane-field">
-            <label class="mdc-text-field mdc-text-field--filled">
-              <span class="mdc-text-field__ripple"></span>
-              <span class="mdc-floating-label" id="crane-city-input">City</span>
-              <input
-                class="mdc-text-field__input"
-                type="text"
-                aria-labelledby="crane-city-input"
-                required
-              />
-              <span class="mdc-line-ripple"></span>
-            </label>
-          </div>
-        </div>
-        <div class="crane-row">
-          <div class="crane-field">
-            <div class="mdc-select mdc-select--no-label">
-              <div class="mdc-select__anchor" style="display: flex">
-                <span class="mdc-select__ripple"></span>
+      </div>
+      <div class="content content--active">
+        <form method="post" action="." id="crane-shipping-form">
+          <div class="crane-row">
+            <div class="crane-field">
+              <label class="mdc-text-field mdc-text-field--filled">
+                <span class="mdc-text-field__ripple"></span>
+                <span class="mdc-floating-label" id="crane-name-input"
+                  >Name</span
+                >
                 <input
+                  class="mdc-text-field__input"
                   type="text"
-                  disabled
-                  readonly
-                  class="mdc-select__selected-text"
+                  aria-labelledby="crane-name-input"
+                  required
                 />
-                <span class="mdc-floating-label">State</span>
-                <i class="mdc-select__dropdown-icon"></i>
                 <span class="mdc-line-ripple"></span>
-              </div>
-
-              <div
-                class="mdc-select__menu mdc-menu mdc-menu-surface demo-width-class"
-              >
-                <ul class="mdc-list">
-                  <li class="mdc-list-item" data-value="AL">
-                    <span class="mdc-list-item__text"> Alabama </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="AK">
-                    <span class="mdc-list-item__text"> Alaska </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="AZ">
-                    <span class="mdc-list-item__text"> Arizona </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="AR">
-                    <span class="mdc-list-item__text"> Arkansas </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="CA">
-                    <span class="mdc-list-item__text"> California </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="CO">
-                    <span class="mdc-list-item__text"> Colorado </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="CT">
-                    <span class="mdc-list-item__text"> Connecticut </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="DE">
-                    <span class="mdc-list-item__text"> Delaware </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="DC">
-                    <span class="mdc-list-item__text">
-                      District Of Columbia
-                    </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="FL">
-                    <span class="mdc-list-item__text"> Florida </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="GA">
-                    <span class="mdc-list-item__text"> Georgia </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="HI">
-                    <span class="mdc-list-item__text"> Hawaii </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="ID">
-                    <span class="mdc-list-item__text"> Idaho </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="IL">
-                    <span class="mdc-list-item__text"> Illinois </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="IN">
-                    <span class="mdc-list-item__text"> Indiana </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="IA">
-                    <span class="mdc-list-item__text"> Iowa </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="KS">
-                    <span class="mdc-list-item__text"> Kansas </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="KY">
-                    <span class="mdc-list-item__text"> Kentucky </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="LA">
-                    <span class="mdc-list-item__text"> Louisiana </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="ME">
-                    <span class="mdc-list-item__text"> Maine </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="MD">
-                    <span class="mdc-list-item__text"> Maryland </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="MA">
-                    <span class="mdc-list-item__text"> Massachusetts </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="MI">
-                    <span class="mdc-list-item__text"> Michigan </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="MN">
-                    <span class="mdc-list-item__text"> Minnesota </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="MS">
-                    <span class="mdc-list-item__text"> Mississippi </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="MO">
-                    <span class="mdc-list-item__text"> Missouri </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="MT">
-                    <span class="mdc-list-item__text"> Montana </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="NE">
-                    <span class="mdc-list-item__text"> Nebraska </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="NV">
-                    <span class="mdc-list-item__text"> Nevada </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="NH">
-                    <span class="mdc-list-item__text"> New Hampshire </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="NJ">
-                    <span class="mdc-list-item__text"> New Jersey </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="NM">
-                    <span class="mdc-list-item__text"> New Mexico </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="NY">
-                    <span class="mdc-list-item__text"> New York </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="NC">
-                    <span class="mdc-list-item__text"> North Carolina </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="ND">
-                    <span class="mdc-list-item__text"> North Dakota </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="OH">
-                    <span class="mdc-list-item__text"> Ohio </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="OK">
-                    <span class="mdc-list-item__text"> Oklahoma </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="OR">
-                    <span class="mdc-list-item__text"> Oregon </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="PA">
-                    <span class="mdc-list-item__text"> Pennsylvania </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="PA">
-                    <span class="mdc-list-item__text"> Rhode Island </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="RI">
-                    <span class="mdc-list-item__text"> Rhode Island </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="SC">
-                    <span class="mdc-list-item__text"> South Carolina </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="SD">
-                    <span class="mdc-list-item__text"> South Dakota </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="TN">
-                    <span class="mdc-list-item__text"> Tennessee </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="TX">
-                    <span class="mdc-list-item__text"> Texas </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="UT">
-                    <span class="mdc-list-item__text"> Utah </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="VT">
-                    <span class="mdc-list-item__text"> Vermont </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="VA">
-                    <span class="mdc-list-item__text"> Virginia </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="WA">
-                    <span class="mdc-list-item__text"> Washington </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="WV">
-                    <span class="mdc-list-item__text"> West Virginia </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="WI">
-                    <span class="mdc-list-item__text"> Wisconsin </span>
-                  </li>
-                  <li class="mdc-list-item" data-value="WY">
-                    <span class="mdc-list-item__text"> Wyoming </span>
-                  </li>
-                </ul>
-              </div>
+              </label>
             </div>
           </div>
-          <div class="crane-field">
-            <label class="mdc-text-field mdc-text-field--filled">
-              <span class="mdc-text-field__ripple"></span>
-              <span class="mdc-floating-label" id="crane-zip-code-input"
-                >ZIP Code</span
-              >
-              <input
-                class="mdc-text-field__input"
-                type="text"
-                aria-labelledby="crane-zip-code-input"
-                required
-                minlength="5"
-                maxlength="5"
-                pattern="[0-9]*"
-              />
-              <span class="mdc-line-ripple"></span>
-            </label>
-          </div>
-        </div>
-        <div class="crane-row">
-          <div class="mdc-form-field">
-            <div class="mdc-checkbox">
-              <input
-                type="checkbox"
-                id="basic-accept-checkbox"
-                class="mdc-checkbox__native-control"
-              />
-              <div class="mdc-checkbox__background">
-                <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
-                  <path
-                    class="mdc-checkbox__checkmark-path"
-                    fill="none"
-                    d="M1.73,12.91 8.1,19.28 22.79,4.59"
+          <div class="crane-row">
+            <div class="crane-field">
+              <div class="mdc-form-field">
+                <div class="mdc-radio">
+                  <input
+                    class="mdc-radio__native-control"
+                    type="radio"
+                    id="male"
+                    name="radios"
+                    checked
                   />
-                </svg>
-                <div class="mdc-checkbox__mixedmark"></div>
+                  <div class="mdc-radio__background">
+                    <div class="mdc-radio__outer-circle"></div>
+                    <div class="mdc-radio__inner-circle"></div>
+                  </div>
+                  <div class="mdc-radio__ripple"></div>
+                </div>
+                <label for="male">Male</label>
+                <div class="mdc-radio">
+                  <input
+                    class="mdc-radio__native-control"
+                    type="radio"
+                    id="female"
+                    name="radios"
+                    checked
+                  />
+                  <div class="mdc-radio__background">
+                    <div class="mdc-radio__outer-circle"></div>
+                    <div class="mdc-radio__inner-circle"></div>
+                  </div>
+                  <div class="mdc-radio__ripple"></div>
+                </div>
+                <label for="female">Female</label>
               </div>
-              <div class="mdc-checkbox__ripple"></div>
             </div>
-            <label for="basic-accept-checkbox"
-              >Yes, I accept the
-              <a href="#" id="dialog-login">privacy policies</a>
-            </label>
           </div>
-          <div class="mdc-dialog">
-            <div class="mdc-dialog__container">
-              <div
-                class="mdc-dialog__surface"
-                role="alertdialog"
-                aria-modal="true"
-                aria-labelledby="my-dialog-title"
-                aria-describedby="my-dialog-content"
-              >
-                <!-- Title cannot contain leading whitespace due to mdc-typography-baseline-top() -->
-                <h2 class="mdc-dialog__title" id="my-dialog-title">
-                  <!--
-               -->Choose a Ringtone<!--
-             -->
-                </h2>
-                <div class="mdc-dialog__content" id="my-dialog-content">
+          <div class="crane-row">
+            <div class="crane-field">
+              <label class="mdc-text-field mdc-text-field--filled">
+                <span class="mdc-text-field__ripple"></span>
+                <span class="mdc-floating-label" id="crane-address-input"
+                  >Address</span
+                >
+                <input
+                  class="mdc-text-field__input"
+                  type="text"
+                  aria-labelledby="crane-address-input"
+                  required
+                />
+                <span class="mdc-line-ripple"></span>
+              </label>
+            </div>
+          </div>
+          <div class="crane-row">
+            <div class="crane-field">
+              <label class="mdc-text-field mdc-text-field--filled">
+                <span class="mdc-text-field__ripple"></span>
+                <span class="mdc-floating-label" id="crane-city-input"
+                  >City</span
+                >
+                <input
+                  class="mdc-text-field__input"
+                  type="text"
+                  aria-labelledby="crane-city-input"
+                  required
+                />
+                <span class="mdc-line-ripple"></span>
+              </label>
+            </div>
+          </div>
+          <div class="crane-row">
+            <div class="crane-field">
+              <div class="mdc-select mdc-select--no-label">
+                <div class="mdc-select__anchor" style="display: flex">
+                  <span class="mdc-select__ripple"></span>
+                  <input
+                    type="text"
+                    disabled
+                    readonly
+                    class="mdc-select__selected-text"
+                  />
+                  <span class="mdc-floating-label">State</span>
+                  <i class="mdc-select__dropdown-icon"></i>
+                  <span class="mdc-line-ripple"></span>
+                </div>
+
+                <div
+                  class="mdc-select__menu mdc-menu mdc-menu-surface demo-width-class"
+                >
                   <ul class="mdc-list">
-                    <li class="mdc-list-item" tabindex="0">
-                      <span class="mdc-list-item__graphic">
-                        <div class="mdc-radio">
-                          <input
-                            class="mdc-radio__native-control"
-                            type="radio"
-                            id="test-dialog-baseline-confirmation-radio-1"
-                            name="test-dialog-baseline-confirmation-radio-group"
-                            checked
-                          />
-                          <div class="mdc-radio__background">
-                            <div class="mdc-radio__outer-circle"></div>
-                            <div class="mdc-radio__inner-circle"></div>
-                          </div>
-                        </div>
-                      </span>
-                      <label
-                        id="test-dialog-baseline-confirmation-radio-1-label"
-                        for="test-dialog-baseline-confirmation-radio-1"
-                        class="mdc-list-item__text"
-                        >None</label
-                      >
+                    <li class="mdc-list-item" data-value="AL">
+                      <span class="mdc-list-item__text"> Alabama </span>
                     </li>
-                    <!-- ... -->
+                    <li class="mdc-list-item" data-value="AK">
+                      <span class="mdc-list-item__text"> Alaska </span>
+                    </li>
+                    <li class="mdc-list-item" data-value="AZ">
+                      <span class="mdc-list-item__text"> Arizona </span>
+                    </li>
+                    <li class="mdc-list-item" data-value="AR">
+                      <span class="mdc-list-item__text"> Arkansas </span>
+                    </li>
+                    <li class="mdc-list-item" data-value="CA">
+                      <span class="mdc-list-item__text"> California </span>
+                    </li>
+                    <li class="mdc-list-item" data-value="CO">
+                      <span class="mdc-list-item__text"> Colorado </span>
+                    </li>
+                    <li class="mdc-list-item" data-value="CT">
+                      <span class="mdc-list-item__text"> Connecticut </span>
+                    </li>
+                    <li class="mdc-list-item" data-value="DE">
+                      <span class="mdc-list-item__text"> Delaware </span>
+                    </li>
+                    <li class="mdc-list-item" data-value="DC">
+                      <span class="mdc-list-item__text">
+                        District Of Columbia
+                      </span>
+                    </li>
+                    <li class="mdc-list-item" data-value="FL">
+                      <span class="mdc-list-item__text"> Florida </span>
+                    </li>
+                    <li class="mdc-list-item" data-value="GA">
+                      <span class="mdc-list-item__text"> Georgia </span>
+                    </li>
+                    <li class="mdc-list-item" data-value="HI">
+                      <span class="mdc-list-item__text"> Hawaii </span>
+                    </li>
+                    <li class="mdc-list-item" data-value="ID">
+                      <span class="mdc-list-item__text"> Idaho </span>
+                    </li>
+                    <li class="mdc-list-item" data-value="IL">
+                      <span class="mdc-list-item__text"> Illinois </span>
+                    </li>
+                    <li class="mdc-list-item" data-value="IN">
+                      <span class="mdc-list-item__text"> Indiana </span>
+                    </li>
+                    <li class="mdc-list-item" data-value="IA">
+                      <span class="mdc-list-item__text"> Iowa </span>
+                    </li>
+                    <li class="mdc-list-item" data-value="KS">
+                      <span class="mdc-list-item__text"> Kansas </span>
+                    </li>
+                    <li class="mdc-list-item" data-value="KY">
+                      <span class="mdc-list-item__text"> Kentucky </span>
+                    </li>
+                    <li class="mdc-list-item" data-value="LA">
+                      <span class="mdc-list-item__text"> Louisiana </span>
+                    </li>
+                    <li class="mdc-list-item" data-value="ME">
+                      <span class="mdc-list-item__text"> Maine </span>
+                    </li>
+                    <li class="mdc-list-item" data-value="MD">
+                      <span class="mdc-list-item__text"> Maryland </span>
+                    </li>
+                    <li class="mdc-list-item" data-value="MA">
+                      <span class="mdc-list-item__text"> Massachusetts </span>
+                    </li>
+                    <li class="mdc-list-item" data-value="MI">
+                      <span class="mdc-list-item__text"> Michigan </span>
+                    </li>
+                    <li class="mdc-list-item" data-value="MN">
+                      <span class="mdc-list-item__text"> Minnesota </span>
+                    </li>
+                    <li class="mdc-list-item" data-value="MS">
+                      <span class="mdc-list-item__text"> Mississippi </span>
+                    </li>
+                    <li class="mdc-list-item" data-value="MO">
+                      <span class="mdc-list-item__text"> Missouri </span>
+                    </li>
+                    <li class="mdc-list-item" data-value="MT">
+                      <span class="mdc-list-item__text"> Montana </span>
+                    </li>
+                    <li class="mdc-list-item" data-value="NE">
+                      <span class="mdc-list-item__text"> Nebraska </span>
+                    </li>
+                    <li class="mdc-list-item" data-value="NV">
+                      <span class="mdc-list-item__text"> Nevada </span>
+                    </li>
+                    <li class="mdc-list-item" data-value="NH">
+                      <span class="mdc-list-item__text"> New Hampshire </span>
+                    </li>
+                    <li class="mdc-list-item" data-value="NJ">
+                      <span class="mdc-list-item__text"> New Jersey </span>
+                    </li>
+                    <li class="mdc-list-item" data-value="NM">
+                      <span class="mdc-list-item__text"> New Mexico </span>
+                    </li>
+                    <li class="mdc-list-item" data-value="NY">
+                      <span class="mdc-list-item__text"> New York </span>
+                    </li>
+                    <li class="mdc-list-item" data-value="NC">
+                      <span class="mdc-list-item__text"> North Carolina </span>
+                    </li>
+                    <li class="mdc-list-item" data-value="ND">
+                      <span class="mdc-list-item__text"> North Dakota </span>
+                    </li>
+                    <li class="mdc-list-item" data-value="OH">
+                      <span class="mdc-list-item__text"> Ohio </span>
+                    </li>
+                    <li class="mdc-list-item" data-value="OK">
+                      <span class="mdc-list-item__text"> Oklahoma </span>
+                    </li>
+                    <li class="mdc-list-item" data-value="OR">
+                      <span class="mdc-list-item__text"> Oregon </span>
+                    </li>
+                    <li class="mdc-list-item" data-value="PA">
+                      <span class="mdc-list-item__text"> Pennsylvania </span>
+                    </li>
+                    <li class="mdc-list-item" data-value="PA">
+                      <span class="mdc-list-item__text"> Rhode Island </span>
+                    </li>
+                    <li class="mdc-list-item" data-value="RI">
+                      <span class="mdc-list-item__text"> Rhode Island </span>
+                    </li>
+                    <li class="mdc-list-item" data-value="SC">
+                      <span class="mdc-list-item__text"> South Carolina </span>
+                    </li>
+                    <li class="mdc-list-item" data-value="SD">
+                      <span class="mdc-list-item__text"> South Dakota </span>
+                    </li>
+                    <li class="mdc-list-item" data-value="TN">
+                      <span class="mdc-list-item__text"> Tennessee </span>
+                    </li>
+                    <li class="mdc-list-item" data-value="TX">
+                      <span class="mdc-list-item__text"> Texas </span>
+                    </li>
+                    <li class="mdc-list-item" data-value="UT">
+                      <span class="mdc-list-item__text"> Utah </span>
+                    </li>
+                    <li class="mdc-list-item" data-value="VT">
+                      <span class="mdc-list-item__text"> Vermont </span>
+                    </li>
+                    <li class="mdc-list-item" data-value="VA">
+                      <span class="mdc-list-item__text"> Virginia </span>
+                    </li>
+                    <li class="mdc-list-item" data-value="WA">
+                      <span class="mdc-list-item__text"> Washington </span>
+                    </li>
+                    <li class="mdc-list-item" data-value="WV">
+                      <span class="mdc-list-item__text"> West Virginia </span>
+                    </li>
+                    <li class="mdc-list-item" data-value="WI">
+                      <span class="mdc-list-item__text"> Wisconsin </span>
+                    </li>
+                    <li class="mdc-list-item" data-value="WY">
+                      <span class="mdc-list-item__text"> Wyoming </span>
+                    </li>
                   </ul>
                 </div>
-                <div class="mdc-dialog__actions">
-                  <button
-                    type="button"
-                    class="mdc-button mdc-dialog__button"
-                    data-mdc-dialog-action="close"
-                  >
-                    <div class="mdc-button__ripple"></div>
-                    <span class="mdc-button__label">Cancel</span>
-                  </button>
-                  <button
-                    type="button"
-                    class="mdc-button mdc-dialog__button"
-                    data-mdc-dialog-action="accept"
-                  >
-                    <div class="mdc-button__ripple"></div>
-                    <span class="mdc-button__label">OK</span>
-                  </button>
-                </div>
               </div>
             </div>
-            <div class="mdc-dialog__scrim"></div>
+            <div class="crane-field">
+              <label class="mdc-text-field mdc-text-field--filled">
+                <span class="mdc-text-field__ripple"></span>
+                <span class="mdc-floating-label" id="crane-zip-code-input"
+                  >ZIP Code</span
+                >
+                <input
+                  class="mdc-text-field__input"
+                  type="text"
+                  aria-labelledby="crane-zip-code-input"
+                  required
+                  minlength="5"
+                  maxlength="5"
+                  pattern="[0-9]*"
+                />
+                <span class="mdc-line-ripple"></span>
+              </label>
+            </div>
           </div>
-        </div>
+          <div class="crane-row">
+            <div class="mdc-form-field">
+              <div class="mdc-checkbox">
+                <input
+                  type="checkbox"
+                  id="basic-accept-checkbox"
+                  class="mdc-checkbox__native-control"
+                />
+                <div class="mdc-checkbox__background">
+                  <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                    <path
+                      class="mdc-checkbox__checkmark-path"
+                      fill="none"
+                      d="M1.73,12.91 8.1,19.28 22.79,4.59"
+                    />
+                  </svg>
+                  <div class="mdc-checkbox__mixedmark"></div>
+                </div>
+                <div class="mdc-checkbox__ripple"></div>
+              </div>
+              <label for="basic-accept-checkbox"
+                >Yes, I accept the
+                <a href="#" id="dialog-login">privacy policies</a>
+              </label>
+            </div>
+            <div class="mdc-dialog">
+              <div class="mdc-dialog__container">
+                <div
+                  class="mdc-dialog__surface"
+                  role="alertdialog"
+                  aria-modal="true"
+                  aria-labelledby="my-dialog-title"
+                  aria-describedby="my-dialog-content"
+                >
+                  <!-- Title cannot contain leading whitespace due to mdc-typography-baseline-top() -->
+                  <h2 class="mdc-dialog__title" id="my-dialog-title">
+                    <!--
+                 -->Choose a Ringtone<!--
+               -->
+                  </h2>
+                  <div class="mdc-dialog__content" id="my-dialog-content">
+                    <ul class="mdc-list">
+                      <li class="mdc-list-item" tabindex="0">
+                        <span class="mdc-list-item__graphic">
+                          <div class="mdc-radio">
+                            <input
+                              class="mdc-radio__native-control"
+                              type="radio"
+                              id="test-dialog-baseline-confirmation-radio-1"
+                              name="test-dialog-baseline-confirmation-radio-group"
+                              checked
+                            />
+                            <div class="mdc-radio__background">
+                              <div class="mdc-radio__outer-circle"></div>
+                              <div class="mdc-radio__inner-circle"></div>
+                            </div>
+                          </div>
+                        </span>
+                        <label
+                          id="test-dialog-baseline-confirmation-radio-1-label"
+                          for="test-dialog-baseline-confirmation-radio-1"
+                          class="mdc-list-item__text"
+                          >None</label
+                        >
+                      </li>
+                      <!-- ... -->
+                    </ul>
+                  </div>
+                  <div class="mdc-dialog__actions">
+                    <button
+                      type="button"
+                      class="mdc-button mdc-dialog__button"
+                      data-mdc-dialog-action="close"
+                    >
+                      <div class="mdc-button__ripple"></div>
+                      <span class="mdc-button__label">Cancel</span>
+                    </button>
+                    <button
+                      type="button"
+                      class="mdc-button mdc-dialog__button"
+                      data-mdc-dialog-action="accept"
+                    >
+                      <div class="mdc-button__ripple"></div>
+                      <span class="mdc-button__label">OK</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="mdc-dialog__scrim"></div>
+            </div>
+          </div>
+          <div class="crane-row crane-row--submit">
+            <button type="submit" class="mdc-button mdc-button--raised">
+              <div class="mdc-button__ripple"></div>
+              <span class="mdc-button__label">Save</span>
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="content">
         <div class="crane-row">
           <div class="crane-field">
             <div class="mdc-data-table">
@@ -657,13 +740,10 @@
             </div>
           </div>
         </div>
-        <div class="crane-row crane-row--submit">
-          <button type="submit" class="mdc-button mdc-button--raised">
-            <div class="mdc-button__ripple"></div>
-            <span class="mdc-button__label">Save</span>
-          </button>
-        </div>
-      </form>
+      </div>
+      <div class="content">
+        <p>Content three</p>
+      </div>
     </main>
 
     <script src="bundle.js" async></script>

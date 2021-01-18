@@ -30,6 +30,7 @@
     "@material/radio": "^6.0.0",
     "@material/ripple": "^6.0.0",
     "@material/select": "^6.0.0",
+    "@material/tab-bar": "^6.0.0",
     "@material/textfield": "^6.0.0"
   }
 }
