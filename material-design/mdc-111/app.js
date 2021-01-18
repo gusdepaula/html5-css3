@@ -4,6 +4,7 @@ import { MDCSelect } from "@material/select";
 import { MDCTextField } from "@material/textfield";
 import { MDCCheckbox } from "@material/checkbox";
 import { MDCRadio } from "@material/radio";
+import { MDCDialog } from "@material/dialog";
 
 const shippingForm = document.querySelector("#crane-shipping-form");
 shippingForm.addEventListener("submit", (evt) => {
@@ -24,3 +25,4 @@ new MDCCheckbox(document.querySelector(".mdc-checkbox"));
 const formField = new MDCFormField(document.querySelector(".mdc-form-field"));
 const radio = new MDCRadio(document.querySelector(".mdc-radio"));
 formField.input = radio;
+new MDCDialog(document.querySelector(".mdc-dialog"));
