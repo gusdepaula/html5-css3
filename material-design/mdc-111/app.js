@@ -6,6 +6,7 @@ import { MDCCheckbox } from "@material/checkbox";
 import { MDCRadio } from "@material/radio";
 import { MDCDialog } from "@material/dialog";
 import { MDCTabBar } from "@material/tab-bar";
+import { MDCSnackbar } from "@material/snackbar";
 
 const shippingForm = document.querySelector("#crane-shipping-form");
 shippingForm.addEventListener("submit", (evt) => {
@@ -27,7 +28,8 @@ const formField = new MDCFormField(document.querySelector(".mdc-form-field"));
 const radio = new MDCRadio(document.querySelector(".mdc-radio"));
 formField.input = radio;
 new MDCDialog(document.querySelector(".mdc-dialog"));
-// new MDCTabBar(document.querySelector(".mdc-tab-bar"));
+
+// Tabs content
 var tabBar = new MDCTabBar(document.querySelector(".mdc-tab-bar"));
 var contentEls = document.querySelectorAll(".content");
 
@@ -39,4 +41,12 @@ tabBar.listen("MDCTabBar:activated", function (event) {
     .classList.remove("content--active");
   // Show content for newly-activated tab
   contentEls[event.detail.index].classList.add("content--active");
+});
+
+// Cookie Snackbar
+const snackbar = document.querySelector(".mdc-snackbar");
+new MDCSnackbar(snackbar);
+const closeSnackBar = document.querySelector(".mdc-snackbar__dismiss");
+closeSnackBar.addEventListener("click", function () {
+  snackbar.classList.remove("mdc-snackbar--open");
 });
