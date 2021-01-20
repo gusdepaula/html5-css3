@@ -22,6 +22,7 @@ textFieldElements.forEach((textFieldEl) => {
 });
 
 new MDCRipple(document.querySelector(".mdc-button"));
+new MDCRipple(document.querySelector(".mdc-icon-button"));
 new MDCSelect(document.querySelector(".mdc-select"));
 new MDCCheckbox(document.querySelector(".mdc-checkbox"));
 const formField = new MDCFormField(document.querySelector(".mdc-form-field"));

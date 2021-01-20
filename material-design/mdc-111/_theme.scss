@@ -17,6 +17,7 @@
 @import "@material/tab-indicator/mdc-tab-indicator";
 @import "@material/tab/mdc-tab";
 @import "@material/snackbar/mdc-snackbar";
+@import "@material/icon-button/mdc-icon-button";
 
 .crane-button {
   $mdc-theme-primary: $crane-primary-color;
@@ -48,4 +49,8 @@
 
 .content--active {
   display: block;
+}
+
+.mdc-snackbar__dismiss {
+  color: hsla(0, 0%, 100%, 0.87);
 }
