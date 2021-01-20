@@ -28,7 +28,18 @@ new MDCCheckbox(document.querySelector(".mdc-checkbox"));
 const formField = new MDCFormField(document.querySelector(".mdc-form-field"));
 const radio = new MDCRadio(document.querySelector(".mdc-radio"));
 formField.input = radio;
-new MDCDialog(document.querySelector(".mdc-dialog"));
+
+// Dialog
+const dialog = document.querySelector(".mdc-dialog");
+new MDCDialog(dialog);
+const openDialog = document.querySelector("#dialog-login");
+openDialog.addEventListener("click", function () {
+  dialog.classList.add("mdc-dialog--open");
+});
+const closeDialog = document.querySelector(".mdc-dialog__dismiss");
+closeDialog.addEventListener("click", function () {
+  dialog.classList.remove("mdc-dialog--open");
+});
 
 // Tabs content
 var tabBar = new MDCTabBar(document.querySelector(".mdc-tab-bar"));
