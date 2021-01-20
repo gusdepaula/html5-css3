@@ -18,9 +18,14 @@
 @import "@material/tab/mdc-tab";
 @import "@material/snackbar/mdc-snackbar";
 @import "@material/icon-button/mdc-icon-button";
+@import "@material/image-list/mdc-image-list";
 
 .crane-button {
   $mdc-theme-primary: $crane-primary-color;
+}
+
+.my-masonry-image-list {
+  @include mdc-image-list-masonry-columns(5);
 }
 
 .crane-label {
