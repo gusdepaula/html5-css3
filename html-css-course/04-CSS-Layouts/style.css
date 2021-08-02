@@ -281,3 +281,13 @@ nav p {
 nav {
   float: right;
 }
+
+.clear {
+  clear: both;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+}
