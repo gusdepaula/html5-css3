@@ -41,8 +41,9 @@
 
         /* CSS GRID */
         display: grid;
-        grid-template-columns: 200px 200px 100px 100px;
-        grid-template-rows: 300px 200px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr auto;
+        height: 500px;
 
         /* gap: 30px; */
         column-gap: 30px;
