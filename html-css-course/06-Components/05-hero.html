@@ -29,8 +29,17 @@
       }
 
       header {
-        background-color: orangered;
+        /* background-color: orangered; */
         height: 100vh;
+        position: relative;
+
+        background-image: linear-gradient(
+            rgba(34, 34, 34, 0.6),
+            rgba(34, 34, 34, 0.6)
+          ),
+          url(hero.jpg);
+        background-size: cover;
+        color: #fff;
       }
 
       nav {
@@ -38,12 +47,34 @@
         font-weight: 700;
         display: flex;
         justify-content: space-between;
-        background-color: green;
+        padding-top: 32px;
+        /* background-color: green; */
+        /* background-image: linear-gradient(to right, red, blue); */
+      }
+
+      .header-container {
+        width: 1200px;
+        position: absolute;
+
+        /* in relation to PARENT size */
+        left: 50%;
+        top: 50%;
+
+        /* in relation to ELEMENT size */
+        transform: translate(-50%, -50%);
+        /* background-color: violet; */
+
+        /* text-align: center; */
+      }
+
+      .header-container-inner {
+        width: 50%;
       }
 
       h1 {
         font-size: 52px;
         margin-bottom: 32px;
+        line-height: 1.05;
       }
 
       p {
