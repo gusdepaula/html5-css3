@@ -1,14 +1,12 @@
-/**************************/
+/********************************************/
 /* HEADER */
-/**************************/
+/********************************************/
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #fdf2e9;
-
-  /* Because we want header to be sticky later */
   height: 9.6rem;
   padding: 0 4.8rem;
 }
@@ -17,9 +15,9 @@
   height: 2.2rem;
 }
 
-/**************************/
+/********************************************/
 /* NAVIGATION */
-/**************************/
+/********************************************/
 
 .main-nav-list {
   list-style: none;
@@ -56,13 +54,26 @@
   background-color: #cf711f;
 }
 
-/**************************/
+/********************************************/
 /* HERO SECTION */
-/**************************/
+/********************************************/
 
 .section-hero {
   background-color: #fdf2e9;
   padding: 4.8rem 0 9.6rem 0;
+}
+
+@media (max-width: 600px) {
+  .section-hero {
+    background-color: blue;
+    border: 20px dashed blue;
+  }
+}
+
+@media (max-width: 1200px) {
+  .section-hero {
+    background-color: orangered;
+  }
 }
 
 .hero {
@@ -105,7 +116,7 @@
 }
 
 .delivered-imgs img:last-child {
-  margin: 0;
+  margin-right: 0;
 }
 
 .delivered-text {
@@ -118,9 +129,9 @@
   font-weight: 700;
 }
 
-/**************************/
-/* FEATURED IN SECTION */
-/**************************/
+/********************************************/
+/* FEATURE IN SECTION */
+/********************************************/
 
 .section-featured {
   padding: 4.8rem 0 3.2rem 0;
@@ -138,7 +149,7 @@
 
 .logos {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .logos img {
@@ -147,9 +158,9 @@
   opacity: 50%;
 }
 
-/**************************/
-/* HOW IT WORKS SECTION */
-/**************************/
+/********************************************/
+/* HOW IT SECTION */
+/********************************************/
 
 .section-how {
   padding: 9.6rem 0;
@@ -206,12 +217,11 @@
 
 .step-img {
   width: 35%;
-  /* z-index: 10; */
 }
 
-/**************************/
+/********************************************/
 /* MEALS SECTION */
-/**************************/
+/********************************************/
 
 .section-meals {
   padding: 9.6rem 0;
@@ -226,11 +236,11 @@
 
 .meal:hover {
   transform: translateY(-1.2rem);
-  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
 }
 
 .meal-content {
   padding: 3.2rem 4.8rem 4.8rem 4.8rem;
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.6);
 }
 
 .meal-tags {
@@ -252,9 +262,11 @@
 .tag--vegetarian {
   background-color: #51cf66;
 }
+
 .tag--vegan {
   background-color: #94d82d;
 }
+
 .tag--paleo {
   background-color: #ffd43b;
 }
@@ -295,10 +307,9 @@
   font-size: 1.8rem;
 }
 
-/**************************/
+/********************************************/
 /* TESTIMONIALS SECTION */
-/**************************/
-
+/********************************************/
 .section-testimonials {
   background-color: #fdf2e9;
   display: grid;
@@ -313,6 +324,7 @@
 .testimonials {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 4.8rem;
   row-gap: 4.8rem;
   column-gap: 8rem;
 }
@@ -355,43 +367,41 @@
   transform: scale(1.1);
 }
 
-/**************************/
-/* MEALS SECTION */
-/**************************/
+/********************************************/
+/* PRICING SECTION */
+/********************************************/
 
 .section-pricing {
   padding: 9.6rem 0;
 }
 
-.princing-plan {
+.pricing-plan {
   border-radius: 11px;
 
   width: 75%;
 }
 
-.princing-plan--starter {
+.pricing-plan--starter {
   justify-self: end;
   border: 2px solid #fdf2e9;
   padding: 4.6rem;
 }
 
-.princing-plan--complete {
+.pricing-plan--complete {
   background-color: #fdf2e9;
   padding: 4.8rem;
   position: relative;
   overflow: hidden;
 }
 
-.princing-plan--complete::after {
+.pricing-plan--complete::after {
   content: "Best value";
   position: absolute;
-  top: 6%;
+  top: 5%;
   right: -18%;
-
   text-transform: uppercase;
   font-size: 1.4rem;
   font-weight: 700;
-  color: #333;
   background-color: #ffd43b;
   padding: 0.8rem 8rem;
   transform: rotate(45deg);
@@ -421,12 +431,12 @@
 .plan-price span {
   font-size: 3rem;
   font-weight: 500;
-  margin-right: 0.8rem;
 }
 
 .plan-text {
   font-size: 1.6rem;
   line-height: 1.6;
+  margin-right: 0.8rem;
   color: #6f6f6f;
 }
 
@@ -463,23 +473,19 @@
   line-height: 1.8;
 }
 
-/**************************/
+/********************************************/
 /* CTA SECTION */
-/**************************/
+/********************************************/
 
 .section-cta {
-  /* top / right / bottom / left */
-  /* padding: 9.6rem 0 12.8rem 0; */
-
-  /* top / horizontal / left */
-  padding: 4.8rem 0 12.8rem;
+  padding: 9.6rem 0 12.8rem 0;
 }
 
 .cta {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  /* background-color: #e67e22; */
-  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+  background-color: #e67e22;
+  box-shadow: 0 2.4rem 4, 8rem rgba(0, 0, 0, 0.075);
   border-radius: 11px;
 
   background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
@@ -487,12 +493,11 @@
 }
 
 .cta-text-box {
+  color: #2e1907;
   padding: 4.8rem 6.4rem 6.4rem 6.4rem;
-  color: #45260a;
 }
 
 .cta .heading-secondary {
-  /* color: #45260a; */
   color: inherit;
   margin-bottom: 3.2rem;
 }
@@ -534,26 +539,25 @@
   padding: 1.2rem;
   font-size: 1.8rem;
   font-family: inherit;
-  color: inherit;
   border: none;
   background-color: #fdf2e9;
   border-radius: 9px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  color: inherit;
 }
 
 .cta-form input::placeholder {
   color: #aaa;
 }
 
-.cta *:focus {
+.cta-form *:focus {
   outline: none;
-  box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
+  box-shadow: 0 0 0 0.8rem rgb(253, 242, 233, 0.5);
 }
 
-/**************************/
-/* FOOTER */
-/**************************/
-
+/********************************************/
+/* FOOTER SECTION */
+/********************************************/
 .footer {
   padding: 12.8rem 0;
   border-top: 1px solid #eee;
@@ -571,12 +575,6 @@
 .footer-logo {
   display: block;
   margin-bottom: 3.2rem;
-}
-
-.social-links {
-  list-style: none;
-  display: flex;
-  gap: 2.4rem;
 }
 
 .social-icon {
@@ -605,6 +603,12 @@
 
 .address {
   margin-bottom: 2.4rem;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
 }
 
 .footer-nav {
