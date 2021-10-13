@@ -15,7 +15,6 @@ Default: 1
 Small: 1.05
 Medium: 1.2
 Paragraph default: 1.6
-Large: 1.8
 
 - Letter spacing
 -0.5px
@@ -64,11 +63,8 @@ Medium: 11px
 }
 
 html {
-  /* font-size: 10px; */
-
-  /* 10px / 16px = 0.625 = 62.5% */
-  /* Percentage of user's browser font-size setting */
   font-size: 62.5%;
+
   overflow-x: hidden;
 }
 
@@ -82,23 +78,21 @@ body {
   overflow-x: hidden;
 }
 
-/**************************/
-/* GENRAL REUSABLE COMPONENTS */
-/**************************/
+/********************************************/
+/* GENERAL REUSABLE COMPONENTS */
+/********************************************/
 
 .container {
   /* 1140px */
   max-width: 120rem;
-  padding: 0 3.2rem;
   margin: 0 auto;
+  padding: 0 3.2rem;
 }
 
 .grid {
   display: grid;
-  column-gap: 6.4rem;
   row-gap: 9.6rem;
-
-  /* margin-bottom: 9.6rem; */
+  column-gap: 6.4rem;
 }
 
 /* .grid:last-child {
@@ -130,12 +124,9 @@ body {
 }
 
 .heading-primary,
-.heading-secondary,
-.heading-tertiary {
+.heading-secondary {
   font-weight: 700;
   color: #333;
-  /* color: #45260a; */
-  /* color: #343a40; */
   letter-spacing: -0.5px;
 }
 
@@ -171,19 +162,17 @@ body {
 .btn:link,
 .btn:visited {
   display: inline-block;
-
   text-decoration: none;
   font-size: 2rem;
   font-weight: 600;
   padding: 1.6rem 3.2rem;
   border-radius: 9px;
 
-  /* Only necessary for .btn */
   border: none;
   cursor: pointer;
   font-family: inherit;
 
-  /* Put transition on original "state" */
+  /* put transition on original "state" */
   /* transition: background-color 0.3s; */
   transition: all 0.3s;
 }
@@ -209,9 +198,7 @@ body {
 .btn--outline:active {
   background-color: #fdf2e9;
 
-  /* border: 3px solid #fff; */
-
-  /* Trick to add border inside */
+  /* trick to add border inside */
   box-shadow: inset 0 0 0 3px #fff;
 }
 
@@ -222,9 +209,10 @@ body {
   padding: 1.2rem;
 }
 
-.btn--form:hover {
+.btn--form:hover,
+.btn--form:active {
   background-color: #fff;
-  color: #555;
+  color: #45260a;
 }
 
 .link:link,
@@ -266,12 +254,10 @@ body {
 
 *:focus {
   outline: none;
-  /* outline: 4px dotted #e67e22; */
-  /* outline-offset: 8px; */
   box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
 }
 
-/* HELPER/SETTINGS CLASSES */
+/* HELPER/SETTING CLASSES */
 .margin-right-sm {
   margin-right: 1.6rem !important;
 }

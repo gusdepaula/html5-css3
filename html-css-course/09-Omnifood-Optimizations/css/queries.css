@@ -1,9 +1,9 @@
-/* rem and em do NOT depend on html font-size in media queries! Instead, 1rem = 1em = 16px */
+/* rem and em do NOT depend on html font-size in media queries! 
+Intead, 1rem = 1em = 16px*/
 
-/**************************/
+/********************************************/
 /* BELOW 1344px (Smaller desktops) */
-/**************************/
-
+/********************************************/
 @media (max-width: 84em) {
   .hero {
     max-width: 120rem;
@@ -18,19 +18,18 @@
   }
 }
 
-/**************************/
+/********************************************/
 /* BELOW 1200px (Landscape Tablets) */
-/**************************/
-
+/********************************************/
 @media (max-width: 75em) {
   html {
-    /* 9px / 16px  */
+    /* 9px/16px  */
     font-size: 56.25%;
   }
 
   .grid {
-    column-gap: 4.8rem;
     row-gap: 6.4rem;
+    column-gap: 4.8rem;
   }
 
   .heading-secondary {
@@ -58,13 +57,12 @@
   }
 }
 
-/**************************/
+/********************************************/
 /* BELOW 944px (Tablets) */
-/**************************/
-
+/********************************************/
 @media (max-width: 59em) {
   html {
-    /* 8px / 16px = 0.5 = 50% */
+    /* 8px/16px  */
     font-size: 50%;
   }
 
@@ -92,7 +90,7 @@
     height: 2.4rem;
   }
 
-  .step-number {
+  .step_number {
     font-size: 7.4rem;
   }
 
@@ -109,7 +107,6 @@
   }
 
   .cta {
-    /* 3/5 = 60% + 2/5 = 40% */
     grid-template-columns: 3fr 2fr;
   }
 
@@ -118,7 +115,7 @@
   }
 
   .btn--form {
-    margin-top: 1.2rem;
+    margin-top: 2rem;
   }
 
   /* MOBILE NAVIGATION */
@@ -140,14 +137,14 @@
     justify-content: center;
     transition: all 0.5s ease-in;
 
-    /* Hide navigation */
+    /* hide navigation */
     /* Allows NO transitions at all */
     /* display: none; */
 
     /* 1) Hide it visually */
     opacity: 0;
 
-    /* 2) Make it unaccessible to mouse and keyboard */
+    /* 2) Make it unaccessiblie to mouse and keyboard */
     pointer-events: none;
 
     /* 3) Hide it from screen readers */
@@ -158,6 +155,7 @@
     opacity: 1;
     pointer-events: auto;
     visibility: visible;
+
     transform: translateX(0);
   }
 
@@ -180,10 +178,9 @@
   }
 }
 
-/**************************/
-/* BELOW 704px (Smaller tablets) */
-/**************************/
-
+/********************************************/
+/* BELOW 704px (Smaller Tablets) */
+/********************************************/
 @media (max-width: 44em) {
   .grid--3-cols,
   .grid--4-cols {
@@ -219,13 +216,12 @@
   }
 }
 
-/**************************/
+/********************************************/
 /* BELOW 544px (Phones) */
-/**************************/
-
+/********************************************/
 @media (max-width: 34em) {
   .grid {
-    row-gap: 4.8rem;
+    row-gap: 8.4rem;
   }
 
   .grid--2-cols,
@@ -290,11 +286,3 @@
     grid-row: 1;
   }
 }
-
-/* 
-- Font sizes (px)
-10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
-
-- Spacing system (px)
-2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
-*/
