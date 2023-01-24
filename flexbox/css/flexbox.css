@@ -31,7 +31,19 @@
 
 .rodapePrincipal-navMap-list {
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  /* flex-direction: column;
+  flex-wrap: wrap; */
+  flex-flow: column wrap;
   height: 260px;
+}
+
+.conteudoPrincipal-cursos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.conteudoPrincipal-cursos-link {
+  width: 23%;
+  margin-bottom: 1%;
 }
